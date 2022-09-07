@@ -23,7 +23,8 @@ jobs:
       #   with:
       #     version: latest
       #     args: -E gofmt
-      - name: check dir
+      # - name: check dir
+      - uses: actions/checkout@v2
         name: pwd
       - name: Run tests
         run: go test
