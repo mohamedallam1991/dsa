@@ -23,8 +23,9 @@ jobs:
       #   with:
       #     version: latest
       #     args: -E gofmt
+      - name: check dir
+        name: pwd
       - name: Run tests
-        run: pwd
         run: go test
   # codespell:
   #   name: Check for spelling errors
