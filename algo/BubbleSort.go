@@ -1,6 +1,6 @@
 package algo
 
-func Bubble(array []int) []int {
+func BubbleSort(array []int) []int {
 	length := len(array)
 	for i := 0; i < length; i++ {
 		for j := 0; j < length-1-i; j++ {
