@@ -6,6 +6,11 @@ import (
 
 var arr = []int{2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97}
 
+// func TestTry(t *testing.T) {
+// 	a := try()
+// 	fmt.Println(a)
+// }
+
 func TestBinarySearch(t *testing.T) {
 	tests := []struct {
 		arg    []int
@@ -20,6 +25,16 @@ func TestBinarySearch(t *testing.T) {
 	for _, tt := range tests {
 		t.Run("array test", func(t *testing.T) {
 			if tt.want != BinarySearch(tt.arg, tt.needle) {
+				if LinearSearch(tt.arg, tt.needle) == false {
+					t.Error("Using LinearSearch Your binary search isnt working properly")
+				}
+				t.Errorf("Your binary search isnt working properly")
+			}
+		})
+	}
+	for _, tt := range tests {
+		t.Run("array test", func(t *testing.T) {
+			if tt.want != BinarySearcha(tt.arg, tt.needle) {
 				if LinearSearch(tt.arg, tt.needle) == false {
 					t.Error("Using LinearSearch Your binary search isnt working properly")
 				}
